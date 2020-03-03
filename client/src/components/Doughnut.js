@@ -4,7 +4,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 const hookChild = (props) => {
     return (
-        <div className="col-md-6">
+        <div className="col-md-6 mt-5">
             <Doughnut
                 data={
                     {

@@ -4,6 +4,8 @@ import Doughnut from './Doughnut';
 import Bar from './Bar';
 import Line from './Line';
 import Pie from './Pie';
+import Icons from './Icons';
+import ProgressBars from './ProgressBars';
 
 
 const Hooks = () => {
@@ -33,7 +35,7 @@ const Hooks = () => {
                 setEven(evenNums => evenNums + 1);
             }
 
-        }, 3000);
+        }, 5000);
 
         return () => {
             clearInterval(interval);
@@ -49,12 +51,14 @@ const Hooks = () => {
     // }, []);
 
     return (
-        <div className="container pt-5">
+        <div className="container">
             <div className="row">
+                <Icons number={oddNums+evenNums} />
                 <Doughnut number={counter} />
                 <Bar number={counter} />
                 <Line numbers={numbers} />
                 <Pie odd={oddNums} even={evenNums} />
+                <ProgressBars />
             </div>
         </div>
     );

@@ -1,25 +1,20 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 
 
-const BarComponent = (props) => {
+const LineComponent = (props) => {
     return (
-        <div className="col-md-6 bg-secondary mt-4 mb-2">
-            <Bar
+        <div className="col-md-8 pt-5 bg-secondary p-2 text-white my-4">
+            <Line
                 data={
                     {
-                        labels: ['Success', 'Fail', 'Minus'],
+                        labels: props.numbers,
+                        steppedLine: true,
                         datasets: [
                             {
-                                data: [
-                                    props.number,
-                                    props.number + 12,
-                                    '-10'
-
-                                ],
+                                data: props.numbers,
                                 backgroundColor: [
                                     'rgba(119, 179, 0, 1)',
-                                    '#FF8800',
                                     'rgba(204, 0, 0, 1)'
                                 ]
                             }
@@ -37,4 +32,4 @@ const BarComponent = (props) => {
 }
 
 
-export default BarComponent;
+export default LineComponent;

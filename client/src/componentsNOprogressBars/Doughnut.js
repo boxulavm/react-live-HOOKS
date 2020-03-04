@@ -1,25 +1,22 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 
 
-const BarComponent = (props) => {
+const hookChild = (props) => {
     return (
-        <div className="col-md-6 bg-secondary mt-4 mb-2">
-            <Bar
+        <div className="col-md-6 mt-5">
+            <Doughnut
                 data={
                     {
-                        labels: ['Success', 'Fail', 'Minus'],
+                        labels: ['Success', 'Fail'],
                         datasets: [
                             {
                                 data: [
                                     props.number,
-                                    props.number + 12,
-                                    '-10'
-
+                                    '12'
                                 ],
                                 backgroundColor: [
                                     'rgba(119, 179, 0, 1)',
-                                    '#FF8800',
                                     'rgba(204, 0, 0, 1)'
                                 ]
                             }
@@ -37,4 +34,4 @@ const BarComponent = (props) => {
 }
 
 
-export default BarComponent;
+export default hookChild;

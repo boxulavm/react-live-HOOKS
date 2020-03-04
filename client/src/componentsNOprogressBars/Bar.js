@@ -13,7 +13,7 @@ const BarComponent = (props) => {
                             {
                                 data: [
                                     props.number,
-                                    props.number + 12,
+                                    '12',
                                     '-10'
 
                                 ],

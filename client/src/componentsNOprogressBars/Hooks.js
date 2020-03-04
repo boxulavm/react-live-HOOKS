@@ -14,6 +14,8 @@ const Hooks = () => {
     const [oddNums, setOdd] = useState(0);
     const [evenNums, setEven] = useState(0);
 
+
+
     useEffect(() => {
         const interval = setInterval(() => {
 
@@ -33,7 +35,7 @@ const Hooks = () => {
                 setEven(evenNums => evenNums + 1);
             }
 
-        }, 10000);
+        }, 5000);
 
         return () => {
             clearInterval(interval);
@@ -51,12 +53,12 @@ const Hooks = () => {
     return (
         <div className="container">
             <div className="row">
-                <Icons number={oddNums + evenNums} />
+                <Icons number={oddNums+evenNums} />
                 <Doughnut number={counter} />
                 <Bar number={counter} />
                 <Line numbers={numbers} />
                 <Pie odd={oddNums} even={evenNums} />
-                <ProgressBars number={counter} />
+                <ProgressBars />
             </div>
         </div>
     );

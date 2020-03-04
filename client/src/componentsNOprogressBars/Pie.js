@@ -1,25 +1,22 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
 
-const BarComponent = (props) => {
+const PieComponent = (props) => {
     return (
-        <div className="col-md-6 bg-secondary mt-4 mb-2">
-            <Bar
+        <div className="col-md-4 bg-secondary pt-5 my-4">
+            <Pie
                 data={
                     {
-                        labels: ['Success', 'Fail', 'Minus'],
+                        labels: ['odd', 'even'],
                         datasets: [
                             {
                                 data: [
-                                    props.number,
-                                    props.number + 12,
-                                    '-10'
-
+                                    props.odd,
+                                    props.even
                                 ],
                                 backgroundColor: [
                                     'rgba(119, 179, 0, 1)',
-                                    '#FF8800',
                                     'rgba(204, 0, 0, 1)'
                                 ]
                             }
@@ -37,4 +34,4 @@ const BarComponent = (props) => {
 }
 
 
-export default BarComponent;
+export default PieComponent;

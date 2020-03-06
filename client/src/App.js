@@ -6,7 +6,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container p-5">
+      <div className="container">
         {/* <Live /> */}
         <Hooks />
       </div>
